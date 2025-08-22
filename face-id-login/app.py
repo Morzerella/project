@@ -18,18 +18,16 @@ app.config['SECRET_KEY'] = 'your-secret-key'
 CORS(app, resources={r"/*": {"origins": "*"}})
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
 
-# In-memory storage for demo purposes
-# In production, use a proper database
 users_db = {
     'Maitri': {
         'password': 'maitri123',
         'face_encodings': [],
-        'face_images': ['admin_face1.jpg', 'admin_face2.jpg']  # Sample face images
+        'face_images': ['admin_face1.jpg', 'admin_face2.jpg']  
     },
     'Darshan': {
         'password': 'darshan123',
         'face_encodings': [],
-        'face_images': ['user1_face1.jpg', 'user1_face2.jpg']  # Sample face images
+        'face_images': ['user1_face1.jpg', 'user1_face2.jpg']  
     
     
     }
